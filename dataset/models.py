@@ -23,6 +23,7 @@ class Movies(models.Model):
 
     title = models.CharField(max_length=255)
     category = models.CharField(max_length=15, choices=CATEGORY_CHOICES)
+    trailer_URL=models.CharField(max_length=500,default='http://www.example.com')
 
     def __str__(self):
         return self.title
